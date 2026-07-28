@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>akan name generator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Akan Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-</div>
-   <div class="container">
-       <h1>Akan name generator</h1>
-       <p>An Akan name (known as Kradin or soul name) is traditional to the Akan people of Ghana and is determined by the day of the week a person is born.</p>
-       </div>
-   </div>
-   
 
-   <script src="script.js"></script>
+<div class="container">
+
+    <h1>Akan Name Generator</h1>
+
+    <p>
+        Enter your birthday and gender to discover your Ghanaian Akan name.
+    </p>
+
+    <form id="akanForm">
+
+        <label>Date of Birth</label>
+        <input type="date" id="birthdate">
+
+        <label>Gender</label>
+
+        <select id="gender">
+            <option value="">Choose Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <button type="submit">
+            Get Akan Name
+        </button>
+
+    </form>
+
+    <h2 id="result"></h2>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
