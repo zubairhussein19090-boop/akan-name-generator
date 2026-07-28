@@ -3,7 +3,7 @@
 
 <head>
     <title>Akan Name Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -12,29 +12,43 @@
 
         <h1>Akan Name Generator</h1>
 
-        <p>Enter your birthday and gender to find your Akan name.</p>
-        <P></P>
+        <p>
+            Enter your birthday and gender to discover your Akan name.
+            Akan names come from Ghanaian culture where names are based on the day you were born.
+        </p>
 
 
-        <form id="form">
+        <form id="akanForm">
 
-            <label>Date of Birth:</label><br>
-            <input type="date" id="birthdate"><br><br>
+            <label>Date of Birth:</label>
 
-            <label>Gender:</label><br>
+            <input type="date" id="birthdate">
 
-            <input type="radio" name="gender" value="male"> Male
-            <input type="radio" name="gender" value="female"> Female
 
-            <br><br>
+            <label>Gender:</label>
 
-            <button type="submit">Get Akan Name</button>
+            <div>
+                <input type="radio" name="gender" value="male">
+                Male
+
+                <input type="radio" name="gender" value="female">
+                Female
+            </div>
+
+
+            <button type="submit">
+                Generate Name
+            </button>
+
 
         </form>
 
+
         <h2 id="result"></h2>
 
+
     </div>
+
 
     <script src="script.js"></script>
 
