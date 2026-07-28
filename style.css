@@ -1,11 +1,38 @@
 body{
-    text-align: center;
-    background-color: darkgray;
-    position: relative;
-    background-repeat: no-repeat;
-
-
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
 }
-h1{
-    text-decoration: wavy;
+
+.container{
+
+    width:400px;
+    margin:60px auto;
+    padding:20px;
+
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+input,
+select,
+button{
+
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+button{
+
+    background:#0d6efd;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+
+    background:#084298;
 }
