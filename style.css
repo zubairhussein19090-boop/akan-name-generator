@@ -1,40 +1,68 @@
 body{
+
     font-family: Arial, sans-serif;
-    background: darkslategrey;
-    margin: 0;
-    padding: 0;
+    background: lightblue;
+    margin:0;
+
 }
+
 
 .container{
-    width: 350px;
-    margin: 60px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px gray;
+
+    width:400px;
+    margin:50px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px gray;
+
 }
+
 
 input{
-    width: 90%;
-    padding: 10px;
+
+    margin:10px;
+    padding:10px;
+
 }
+
 
 button{
-    margin-top: 15px;
-    padding: 10px 20px;
-    background:grey;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    background:blue;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
 }
+
 
 button:hover{
-    background: black;
+
+    background:darkblue;
+
 }
 
+
 #result{
-    margin-top: 20px;
-    color: green;
+
+    margin-top:20px;
+
+    color:green;
+
 }
