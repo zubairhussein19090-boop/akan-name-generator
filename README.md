@@ -7,3 +7,8 @@
 - html
 - css
 - javascript
+
+## setup and installation
+
+- colone repo
+- Run file
