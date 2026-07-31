@@ -1,7 +1,6 @@
 // Akan names
 
 const maleNames = [
-
     "Kwasi",
     "Kwadwo",
     "Kwabena",
@@ -9,12 +8,9 @@ const maleNames = [
     "Yaw",
     "Kofi",
     "Kwame"
-
 ];
 
-
 const femaleNames = [
-
     "Akosua",
     "Adwoa",
     "Abenaa",
@@ -22,12 +18,9 @@ const femaleNames = [
     "Yaa",
     "Afua",
     "Ama"
-
 ];
 
-
 const days = [
-
     "Sunday",
     "Monday",
     "Tuesday",
@@ -35,108 +28,83 @@ const days = [
     "Thursday",
     "Friday",
     "Saturday"
-
 ];
-
-
-
-// Get form
 
 const form = document.getElementById("akanForm");
 
-
-
 form.addEventListener("submit", function(event){
-
-
-    // Stop page refreshing
 
     event.preventDefault();
 
-
-
-    // Get birthday
-
     let birthdate = document.getElementById("birthdate").value;
 
-
-
-    // Check birthday
-
     if(birthdate == ""){
-
         alert("Please enter your birthday");
-
         return;
-
     }
 
-
-
-    // Get gender
-
-    let gender = document.querySelector(
-        'input[name="gender"]:checked'
-    );
-
-
-
-    // Check gender
+    let gender = document.querySelector('input[name="gender"]:checked');
 
     if(gender == null){
-
         alert("Please select your gender");
-
         return;
-
     }
 
+    // Split the date
 
+    let date = birthdate.split("-");
 
-    // Create date
+    let year = parseInt(date[0]);
+    let month = parseInt(date[1]);
+    let day = parseInt(date[2]);
 
-    let date = new Date(birthdate);
+    // Check month
 
+    if(month < 1 || month > 12){
+        alert("Invalid month");
+        return;
+    }
 
+    // Check day
 
-    // Find day number
+    if(day < 1 || day > 31){
+        alert("Invalid day");
+        return;
+    }
 
-    let dayNumber = date.getDay();
+    // Formula
 
+    let CC = Math.floor(year / 100);
 
+    let YY = year % 100;
+
+    let dayNumber = Math.floor(
+        (
+            (4 * CC)
+            - (2 * CC)
+            - 1
+            + ((5 * YY) / 4)
+            + ((26 * (month + 1)) / 10)
+            + day
+        ) % 7
+    );
+
+    if(dayNumber < 0){
+        dayNumber += 7;
+    }
 
     let akanName;
 
-
-
-    // Choose name
-
     if(gender.value == "male"){
-
         akanName = maleNames[dayNumber];
-
-    }
-
-    else{
-
+    }else{
         akanName = femaleNames[dayNumber];
-
     }
-
-
-
-    // Display result
 
     document.getElementById("result").innerHTML =
-
     "You were born on " + days[dayNumber] +
     "<br>Your Akan name is " + akanName;
 
-
-
-    // Clear form
-
     form.reset();
-
 
 });
