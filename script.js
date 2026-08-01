@@ -30,7 +30,7 @@ const days = [
     "Saturday"
 ];
 
-const form = document.getElementById("akanForm");
+const form = document.getElementById("akanGenerator");
 
 form.addEventListener("submit", function(event){
 
